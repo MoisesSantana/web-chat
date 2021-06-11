@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>Web Chat</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="main-screen">
+      <div class="listContainers">
+        <div class="inputContainer">
+          <input
+            type="text"
+            name="changeNicknameInput"
+            id="changeNicknameInput"
+            placeholder="My Especial Nickname"
+            data-testid="nickname-box"
+          />
+          <button
+            type="submit"
+            id="changeNicknameBtn"
+            data-testid="nickname-button"
+          >
+            Save
+          </button>
+        </div>
+        <ul id="nicknameContainer"></ul>
+      </div>
+      <div class="listContainers">
+        <ul id="messagesContainer"></ul>
+        <div class="inputContainer">
+          <input
+            type="text"
+            name="inputMessage"
+            id="inputMessage"
+            autocomplete="off"
+            placeholder="Your message"
+            data-testid="message-box"
+          />
+          <button
+            type="submit"
+            id="submitButton"
+            data-testid="send-button"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script
+    src="https://cdn.socket.io/3.1.3/socket.io.min.js"    integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh"
+    crossorigin="anonymous"
+  >
+  </script>
+  <script src="/js/index.js"></script>
+</body>
+</html>
